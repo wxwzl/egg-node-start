@@ -1,0 +1,62 @@
+{
+  "name": "egg-node-starter",
+  "version": "1.0.0",
+  "description": "a node service based on egg framework",
+  "dependencies": {
+    "egg": "2.10.0",
+    "egg-sequelize": "^4.0.2",
+    "egg-scripts": "^2.5.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^11.0.0",
+    "@commitlint/config-conventional": "^11.0.0",
+    "autod": "^3.0.1",
+    "autod-egg": "^1.0.0",
+    "conventional-changelog-cli": "^2.1.1",
+    "egg-bin": "^4.3.7",
+    "egg-mock": "^3.19.2",
+    "eslint": "^4.19.1",
+    "eslint-config-egg": "^7.5.1",
+    "eslint-config-prettier": "^7.1.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "factory-girl": "^5.0.2",
+    "husky": "^4.3.7",
+    "lint-staged": "^10.5.3",
+    "prettier": "^2.2.1",
+    "sequelize-cli": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "scripts": {
+    "start": "egg-scripts start --daemon --title=egg-server-eureka-js-client-master",
+    "stop": "egg-scripts stop --title=egg-server-eureka-js-client-master",
+    "dev": "egg-bin dev",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint . && npm run lint:style",
+    "lint:style": "npx prettier --write ./",
+    "ci": "npm run lint && npm run cov",
+    "autod": "autod",
+    "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0"
+  },
+  "ci": {
+    "version": "8"
+  },
+  "eslintIgnore": [
+    "coverage",
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "author": "zhangjianteng",
+  "private": true
+}
